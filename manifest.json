@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://thespecialcharacter.com/courses/full-stack-development"
+        "https://www.apnacollege.in/course/delta-feb-24"
       ],
       "js": [
         "content.js"

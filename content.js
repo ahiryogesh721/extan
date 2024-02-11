@@ -1,77 +1,110 @@
-const fun = () => {
-  console.log("from ex");
+/* remove buttons */
 
-  document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > div > h2"
-  ).textContent = "₹27,499.00";
+document.querySelector("#el_1706212191243_363").remove();
+document.querySelector("#el_1706212266174_558").remove();
+document.querySelector("#el_1706212215410_439 > a").remove();
 
-  document
-    .querySelector(
-      "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > button"
-    )
-    .remove();
+/* change main button */
+let btn = document.querySelector("#el_1706212215410_439");
 
-  let inpuTag = document.createElement("input");
-  inpuTag.type = "text";
-  inpuTag.placeholder = "enter your utr here";
-  let mybtn = document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > a"
-  );
-  if (mybtn) {
-    mybtn.parentNode.insertBefore(inpuTag, mybtn);
-  }
+let up = document.querySelector("#el_1706212215410_439");
+let div = document.querySelector("#el_1706212215410_439");
 
-  let accNumber = document.createElement("p");
-  let accIfc = document.createElement("p");
+let newBtn = document.createElement("button");
+newBtn.textContent = "Pay Now";
+newBtn.style.height = "40px";
+newBtn.style.width = "150px";
+newBtn.style.backgroundColor = "#5b53a5";
+newBtn.style.borderRadius = "10px";
+newBtn.style.marginTop = "32px";
+newBtn.style.fontSize = "26px";
+newBtn.style.cursor = "pointer";
+newBtn.style.color = "white";
 
-  let myinput = document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > dialog"
-  );
-  if (myinput) {
-    mybtn.parentNode.insertBefore(accIfc, myinput);
-    mybtn.parentNode.insertBefore(accNumber, accIfc);
-  }
+let priceP = document.createElement("p");
+priceP.textContent = "Course Price: ₹27,499.00";
+priceP.style.fontSize = "1.80rem";
+priceP.style.color = "white";
+priceP.style.fontWeight = "bold";
+priceP.style.fontFamily = "inter";
+priceP.style.marginTop = "20px";
 
-  document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > p:nth-child(2)"
-  ).textContent = "acount number:000";
-  document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > p:nth-child(3)"
-  ).textContent = "ifc code:123";
+let acountNumber = document.createElement("p");
+acountNumber.textContent = "Acount Number:000";
+acountNumber.style.fontSize = "1.80rem";
+acountNumber.style.color = "white";
+acountNumber.style.fontWeight = "bold";
+acountNumber.style.fontFamily = "inter";
+acountNumber.style.marginTop = "20px";
 
-  let btn = document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > a"
-  );
+let ifcCode = document.createElement("p");
+ifcCode.textContent = "Acount IFSC Coder:123";
+ifcCode.style.fontSize = "1.80rem";
+ifcCode.style.color = "white";
+ifcCode.style.fontWeight = "bold";
+ifcCode.style.fontFamily = "inter";
+ifcCode.style.marginTop = "20px";
 
-  let newBtn = document.createElement("button");
-  newBtn.textContent = "submit";
+let holderName = document.createElement("p");
+holderName.textContent = "Bank Name: bob";
+holderName.style.fontSize = "1.80rem";
+holderName.style.color = "white";
+holderName.style.fontWeight = "bold";
+holderName.style.fontFamily = "inter";
+holderName.style.marginTop = "20px";
 
-  btn.parentNode.insertBefore(newBtn, btn);
-  btn.remove();
-  newBtn.style.backgroundColor = "rgba(50, 117, 304, 0.1)";
-  newBtn.style.borderRadius = "10px";
+let input = document.createElement("input");
+input.type = "text";
+input.placeholder = "enter your utr here";
+input.style.marginTop = "20px";
+input.style.marginRight = "20px";
+input.style.color = "grey";
+input.style.fontSize = "1.80rem";
+input.style.position = "absolute";
+input.style.top = "305px";
+input.style.right = "410px";
+input.style.borderRadius = "10px";
+input.style.width = "250px";
+input.style.height = "25px";
+input.style.borderColor = "transparent";
 
-  newBtn.addEventListener("click", () => {
-    let pTag = document.createElement("p");
-    pTag.textContent = "please wait your request is under process";
-    newBtn.parentNode.insertBefore(pTag, newBtn.nextSibling);
-    setTimeout(() => {
-      pTag.textContent =
-        "congratulations you have bought the cours successfully";
-    }, 5000);
+let pTag = document.createElement("p");
+pTag.textContent = "";
 
-    setTimeout(() => {
-      window.location =
-        "https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12638830#overview";
-    }, 5000);
-  });
-};
+pTag.style.height = "25px";
+pTag.style.width = "full";
+pTag.style.fontSize = "1.80rem";
+pTag.style.color = "white";
+pTag.style.fontWeight = "bold";
+pTag.style.fontFamily = "inter";
+pTag.style.marginTop = "20px";
+pTag.style.position = "absolute";
+pTag.style.right = "284px";
 
-setInterval(() => {
-  const chker = document.querySelector(
-    "#individualcourse > div.main.py-16 > div.sticky.top-0.hidden.self-start.lg\\:block > aside > div.price__body > a"
-  );
-  if (chker !== null) {
-    fun();
-  }
-}, 100);
+up.parentNode.insertBefore(acountNumber, up);
+up.parentNode.insertBefore(ifcCode, up);
+up.parentNode.insertBefore(holderName, up);
+up.parentNode.insertBefore(priceP, up);
+up.parentNode.insertBefore(input, up);
+
+div.appendChild(newBtn);
+div.appendChild(pTag);
+
+newBtn.addEventListener("click", () => {
+  pTag.textContent = "Please Wait Your Request is Under Process";
+
+  setTimeout(() => {
+    console.log("waiting");
+  }, 5000);
+
+  setTimeout(() => {
+    pTag.textContent = "Congratulations You Have Bought The Cours Successfully";
+  }, 1000);
+
+  setTimeout(() => {
+    console.log("waiting");
+    window.location =
+      "https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12638830#overview";
+    r;
+  }, 5000);
+});
