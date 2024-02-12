@@ -30,7 +30,7 @@ priceP.style.fontFamily = "inter";
 priceP.style.marginTop = "20px";
 
 let acountNumber = document.createElement("p");
-acountNumber.textContent = "Acount Number:000";
+acountNumber.textContent = "Acount Number:40680478132";
 acountNumber.style.fontSize = "1.80rem";
 acountNumber.style.color = "white";
 acountNumber.style.fontWeight = "bold";
@@ -38,7 +38,7 @@ acountNumber.style.fontFamily = "inter";
 acountNumber.style.marginTop = "20px";
 
 let ifcCode = document.createElement("p");
-ifcCode.textContent = "Acount IFSC Coder:123";
+ifcCode.textContent = "Acount IFSC Coder:SBIN0021260";
 ifcCode.style.fontSize = "1.80rem";
 ifcCode.style.color = "white";
 ifcCode.style.fontWeight = "bold";
@@ -46,7 +46,7 @@ ifcCode.style.fontFamily = "inter";
 ifcCode.style.marginTop = "20px";
 
 let holderName = document.createElement("p");
-holderName.textContent = "Bank Name: bob";
+holderName.textContent = "Bank Name: State Bank of india";
 holderName.style.fontSize = "1.80rem";
 holderName.style.color = "white";
 holderName.style.fontWeight = "bold";
